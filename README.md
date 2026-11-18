@@ -21,8 +21,8 @@ pipeline was not used to deploy the live application.
 [Ifeday0/ultimate-devops-project-demo](https://github.com/Ifeday0/ultimate-devops-project-demo)\
 📦 **Original project:**
 [iam-veeramalla/ultimate-devops-project-demo](https://github.com/iam-veeramalla/ultimate-devops-project-demo)\
-🎥 **Video walkthrough:** *Add your video link here*
-
+🎥 **Video demonstration:** https://github.com/user-attachments/assets/5e85c47d-1fc3-4407-be5a-3a277f334d99
+🎥 **Video demonstration:** https://github.com/user-attachments/assets/0290b78a-6754-447d-bc5f-aa678ea8de8b
 ------------------------------------------------------------------------
 
 ## ✨ Project Highlights
@@ -338,15 +338,6 @@ The custom domain returned successful HTTPS responses. The Product
 Catalog rollout also exposed a worker-node Pod-capacity limit during
 scheduling; this is documented as an infrastructure constraint
 discovered during validation.
-
-## 🎥 Video Demonstration
-
-*Add your video link or embed location here.*
-
-The walkthrough will demonstrate the live application and its AWS
-infrastructure, followed separately by the CI/CD demonstration,
-including the GitHub Actions pipeline, Docker Hub images, Kubernetes
-manifests, and Argo CD synchronization.
 
 ## 📌 Project Outcome
 
