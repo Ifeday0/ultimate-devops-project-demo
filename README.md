@@ -17,8 +17,10 @@ pipeline was not used to deploy the live application.
 > service in the Astronomy Shop.
 
 ![alt text](<screenshots/Website accessed and secure via https.png>)
+
 💻 **My repository:**
 [Ifeday0/ultimate-devops-project-demo](https://github.com/Ifeday0/ultimate-devops-project-demo)\
+
 📦 **Original project:**
 [iam-veeramalla/ultimate-devops-project-demo](https://github.com/iam-veeramalla/ultimate-devops-project-demo)\
 
