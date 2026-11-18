@@ -16,7 +16,7 @@ pipeline was not used to deploy the live application.
 > demonstration covered three selected microservices rather than every
 > service in the Astronomy Shop.
 
-🌐 **Live application:** <https://ifecloudevopsmaster.online>\
+![alt text](<screenshots/Website accessed and secure via https.png>)
 💻 **My repository:**
 [Ifeday0/ultimate-devops-project-demo](https://github.com/Ifeday0/ultimate-devops-project-demo)\
 📦 **Original project:**
@@ -128,6 +128,8 @@ flowchart LR
 
 ### 🧱 Infrastructure provisioning
 
+![alt text](<screenshots/VPC and EKS cluster succesfully created via terraform.png>)
+
 Terraform was used to provision the foundational AWS infrastructure,
 including:
 
@@ -143,6 +145,17 @@ reproduce and manage than manually creating each resource in the AWS
 console.
 
 ### 🌐 Domain, DNS and HTTPS
+![alt text](<screenshots/ACM Certificate issued.png>)
+
+![alt text](<screenshots/Route53 DNS records.png>)
+
+![alt text](<screenshots/alb controller deployed.png>)
+
+![alt text](<screenshots/Kubernetes Ingress.png>)
+
+![alt text](<screenshots/ingress deployed.png>)
+
+![alt text](<screenshots/ALB Listeners.png>)
 
 The application was exposed through a custom domain:
 
@@ -161,6 +174,8 @@ The application was exposed through a custom domain:
 `https://www.ifecloudevopsmaster.online` returned successful HTTPS
 responses.
 
+![alt text](<screenshots/Website accessed and secure via https.png>)
+
 TLS terminates at the ALB. The ALB forwards traffic to the frontend
 proxy service in the EKS cluster.
 
@@ -172,6 +187,8 @@ It is separate from the live application deployment described above;
 the live application was deployed to EKS without this pipeline.
 
 ### 1. Continuous Integration --- GitHub Actions
+
+![alt text](<screenshots/githubaction build, push and updated K8s manifest successfull.png>)
 
 A push or pull request targeting `main` triggers the workflow:
 
@@ -188,6 +205,7 @@ manifest-update jobs from running when the build and tests succeed.
 
 ### 2. Containerization and image publishing
 
+![alt text](<screenshots/dockerhub tag.png>)
 
 After a successful build on `main`:
 
@@ -203,6 +221,12 @@ Example image tag format:
 ```
 
 ### 3. Continuous Deployment --- Argo CD
+
+![alt text](<screenshots/dockerhub tag.png>)
+
+![alt text](<screenshots/K8s manifest updated with image tag.png>)
+
+![alt text](<screenshots/image tag taken from dockerhub and deployed to kubernetes by argocd.png>)
 
 For the CI/CD demonstration, after the image is published:
 
