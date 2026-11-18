@@ -345,6 +345,7 @@ discovered during validation.
 https://github.com/user-attachments/assets/5e85c47d-1fc3-4407-be5a-3a277f334d99
 
 🎥 **Video demonstration 2:** 
+
 https://github.com/user-attachments/assets/0290b78a-6754-447d-bc5f-aa678ea8de8b
 
 The walkthrough will demonstrate the live application and its AWS
