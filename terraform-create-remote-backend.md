@@ -3,25 +3,25 @@
 ## **1. AWS Provider Configuration**
 ```hcl
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 ```
 - This block defines the **AWS provider** that Terraform will use.
-- The `region` attribute specifies the AWS region where resources will be created (in this case, `us-west-2`).
+- The `region` attribute specifies the AWS region where resources will be created (in this case, `us-east-1`).
 
 ---
 
 ## **2. Creating an S3 Bucket for Terraform State Storage**
 ```hcl
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "demo-terraform-eks-state-bucket"
+  bucket = "demo-terraform-eks-state-s3-bucket-ifedayo-2026"
 
   lifecycle {
     prevent_destroy = false
   }
 }
 ```
-- This block creates an **S3 bucket** named `demo-terraform-eks-state-bucket`.
+- This block creates an **S3 bucket** named `demo-terraform-eks-state-s3-bucket-ifedayo-2026`.
 - The `lifecycle` rule with `prevent_destroy = false` allows Terraform to delete the bucket when required.
 
 ---

@@ -1,3 +1,4 @@
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -5,13 +6,27 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:042196390826:certificate/c47c601f-a837-47f7-a97e-7016ffa4a170
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
 spec:
   ingressClassName: alb
   rules:
-    - host: example.com
+    - host: ifecloudevopsmaster.online
       http:
         paths:
-          - path: "/"
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: opentelemetry-demo-frontendproxy
+                port:
+                  number: 8080
+
+    - host: www.ifecloudevopsmaster.online
+      http:
+        paths:
+          - path: /
             pathType: Prefix
             backend:
               service:
